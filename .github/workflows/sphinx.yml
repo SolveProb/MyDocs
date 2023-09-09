@@ -1,0 +1,40 @@
+name: Build and Deploy Sphinx Docs
+
+on:
+  push:
+    branches:
+      - main  # 你可以根据需要更改分支名称
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8  # 你可以根据需要选择Python版本
+
+    - name: Install Dependencies
+      shell: bash
+      run: |
+        # pip install --upgrade pip
+        pip install -r requirements.txt
+        # 添加任何其他必要的依赖项，例如扩展或插件
+
+    - name: Build Sphinx Docs
+      run: |
+        # 进入Sphinx文档目录，确保你的Sphinx配置文件位于这个目录下
+        cd docs
+        make html
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docs/_build/html
+
+
