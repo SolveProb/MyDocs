@@ -43,7 +43,15 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../blog_index.html">blogs</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">概率论基本概念</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">概率论基本概念</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">随机事件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">随机变量</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">随机变量的理解</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">随机变量的分布</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -75,19 +83,85 @@
              
   <section id="id1">
 <h1>概率论基本概念<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<section id="id2">
+<h2>随机事件<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <p><strong>定义</strong>  随机现象：在一定的条件下，并不总是出现相同结果的现象。</p>
 <p><strong>定义</strong> 随机试验: 对在相同条件下可以重复的 <strong>随机现象</strong> 的观察，记录，实验。</p>
 <p><strong>定义</strong> 样本空间: 随机现象的一切基本结果的 <strong>集合</strong>。用 $\Omega = { \omega }$ 表示, 其中 $\omega$ 表示基本结果，又称样本点。</p>
 <p><strong>定义</strong> 随机事件:	随机现象的某些样本点组成的 <strong>集合</strong>。</p>
 <ol class="simple">
 <li><p>常用 A, B, C 表示，简称 事件。</p></li>
-<li><p>事件A 发生 $\Leftrightarrow$  A  中 某个样本点出现</p></li>
+<li><p>事件A 发生 $\Leftrightarrow$  A  中 某个样本点出现。</p></li>
 </ol>
+</section>
+<section id="id3">
+<h2>随机变量<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
 <p><strong>定义</strong> 随机变量: 表示随机现象结果的变量。</p>
+<p><strong>定义</strong> 随机变量: 定义在样本空间 $\Omega$ 上的实值函数 X = X(w)</p>
 <ol class="simple">
-<li><p>常用 X,Y,Z 表示，其取值用 x,y,z 表示</p></li>
+<li><p>常用 X,Y,Z 表示，其取值用 x,y,z 表示。</p></li>
 <li><p>很多 <strong>事件</strong> 可以用随机变量表示，表示是应写明随机变量的含义。</p></li>
+<li><p>随机变量的含义是按需要设置的。</p></li>
+<li><p>与微积分中的变量不同，概率论中的随机变量 X 是一种随机取值的变量，且 便随一个 <strong>分布</strong>。以离散随机变量为例，我们不仅需要知道 X 可能取哪些值，还需要知道它取这些值的概率是多少，这就需要分布的概念。有没有分布是区分一般变量与随机变量的主要标志。</p></li>
+<li><p>X： $\Omega \rightarrow \R$</p></li>
 </ol>
+<section id="id4">
+<h3>随机变量的理解<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>若 记  <strong>随机变量</strong>  X: 连续投两次骰子的点数之和。</p>
+<p>则：</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>w</th>
+<th>X(w)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>样本点</strong></td>
+<td>X 的取值</td>
+</tr>
+<tr>
+<td>w(1,1)</td>
+<td>2</td>
+</tr>
+<tr>
+<td>w(1,2)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>w(6,6)</td>
+<td>12</td>
+</tr>
+</tbody>
+</table><p><strong>事件</strong> A： 两次点数之和为 6 $\Leftrightarrow A = { \omega  | X(\omega) = 6}$</p>
+<p>P(A) = 5/36</p>
+</section>
+<section id="id5">
+<h3>随机变量的分布<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<p><strong>定义</strong>：设 X 是一个随机变量，对 $\forall \ x \in \R $ ， 称
+$$
+F(x)=P(X \le x)
+$$
+为 X 的 <strong>分布函数</strong>（CDF，Cumulative Distribution Function）</p>
+<ol class="simple">
+<li><p>称 X 服从 F(x), 记 $X \sim F(x)$</p></li>
+<li><p>用 $F_X(x)$ 表明是X的分布函数</p></li>
+<li><p>$F(x) : \R \rightarrow [0,1]$</p></li>
+<li><p>若 X=X(w)，$B \subset \R $, 则 ${ X \in B }$  表示如下随机事件：${ \omega | X(\omega) \in B } \subset \Omega$</p></li>
+<li><p>通常使用 $\le,=,&lt;,&gt;$ 把 X 与某些实数连接，以表示事件。例如: ${ X \le a}$</p></li>
+</ol>
+<p><strong>定义</strong>：设 X 为 离散随机变量，若 X 的所有可能取值为 $x_1, x_2,\dots x_n …,$ 则称 X 取 $x_i$ 的  概率
+$$
+p_i = p(x_i) = P(X=x_i), i=1,2,\dots,n,\dots
+$$
+为 X 的 <strong>概率分布列</strong>，记 $ X \sim {  p_i } $</p>
+</section>
+</section>
 </section>
 
 
