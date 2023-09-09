@@ -62,3 +62,8 @@ $$
 p_i = p(x_i) = P(X=x_i), i=1,2,\dots,n,\dots
 $$
 为 X 的 **概率分布列**，记 $ X \sim \{  p_i \} $
+
+### 测试公式
+
+.. math:: 
+	\sum_{i=1}^{n} x_i
