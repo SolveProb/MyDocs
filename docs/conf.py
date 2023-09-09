@@ -15,7 +15,8 @@ release = '1.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = ['recommonmark',
-'sphinx_markdown_tables'
+'sphinx_markdown_tables',
+'sphinx.ext.mathjax'
 ]
 
 templates_path = ['_templates']
