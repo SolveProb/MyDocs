@@ -2,4 +2,4 @@ sphinx-rtd-theme
 sphinx-markdown-tables
 recommonmark
 sphinx
-
+sphinx-math-dollar
