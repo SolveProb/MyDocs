@@ -20,6 +20,14 @@ extensions = ['recommonmark',
 'sphinx_math_dollar'
 ]
 
+# MathJax configuration
+mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js'
+
+# Optional: Customize MathJax options
+mathjax_config = {
+    'TeX': {'extensions': ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js']}
+}
+
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
