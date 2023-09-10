@@ -1,3 +1,4 @@
+sphinx-mathjax-offline
 sphinx-rtd-theme
 sphinx-markdown-tables
 recommonmark
