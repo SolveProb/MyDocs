@@ -6,10 +6,10 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'tmp'
+project = 'Personal Docs'
 copyright = '2023, syl'
-author = 'syl'
-release = '1.1'
+author = 'Song Yalong'
+release = '0.0.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -18,25 +18,27 @@ extensions = ['recommonmark',
 'sphinx_markdown_tables',
 'sphinx.ext.mathjax',
 'sphinx_math_dollar',
-# 'sphinx-mathjax-offline'
+'sphinx-mathjax-offline'
 ]
 
 
-# Optional: Customize MathJax options
-# mathjax_config = {
-#     'TeX': {'extensions': ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js']}
-# }
+# mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js'
+# mathjax_path = 'https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
 
-mathjax_path = 'https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-svg.js'
+
+# Optional: Customize MathJax options
+
+mathjax_config = {
+    'tex2jax': {
+        'inlineMath': [['$','$'],  ["\\(","\\)"] ],
+        'displayMath': [["\\[","\\]"] , ['$$','$$']],
+    },
+}
 
 mathjax3_config = {
-    'TeX': {
-    'extensions': ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js']
-    },
-
-  'tex': {
-    'inlineMath': [['$','$'], ['\\(','\\)']],
-    'processEscapes': True
+  "tex": {
+    "inlineMath": [['$','$'], ['\\(', '\\)']],
+    "displayMath": [["\\[", "\\]"], ['$$','$$']],
   }
 }
 
