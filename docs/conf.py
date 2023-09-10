@@ -18,7 +18,7 @@ extensions = ['recommonmark',
 'sphinx_markdown_tables',
 'sphinx.ext.mathjax',
 'sphinx_math_dollar',
-'sphinx_mathjax_offline'
+'sphinx-mathjax-offline'
 ]
 
 
