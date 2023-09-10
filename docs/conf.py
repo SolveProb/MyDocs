@@ -18,7 +18,7 @@ extensions = ['recommonmark',
 'sphinx_markdown_tables',
 'sphinx.ext.mathjax',
 'sphinx_math_dollar',
-'sphinx-mathjax-offline'
+# 'sphinx-mathjax-offline'
 ]
 
 
@@ -27,8 +27,14 @@ extensions = ['recommonmark',
 #     'TeX': {'extensions': ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js']}
 # }
 
+mathjax_path = 'https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-svg.js'
+
 mathjax3_config = {
-  'tex2jax': {
+    'TeX': {
+    'extensions': ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js']
+    },
+
+  'tex': {
     'inlineMath': [['$','$'], ['\\(','\\)']],
     'processEscapes': True
   }
