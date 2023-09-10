@@ -62,3 +62,9 @@ $$
 p_i = p(x_i) = P(X=x_i), i=1,2,\dots,n,\dots
 $$
 为 X 的 **概率分布列**，记 $ X \sim \{  p_i \} $
+
+**定义**： 设 随机变量X 的分布函数 为 F(x)， 若存在实轴上的一个非负可积函数 p(x), 使得对任意 x：
+$$
+F(x)= \int_{-\infty}^{x} p(t) dt
+$$
+则 称 p(x) 为 X 的 概率密度函数（PDF, Probability Density Function）
