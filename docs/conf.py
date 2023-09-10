@@ -17,21 +17,26 @@ release = '1.1'
 extensions = ['recommonmark',
 'sphinx_markdown_tables',
 'sphinx.ext.mathjax',
-'sphinx_math_dollar'
+'sphinx_math_dollar',
+'sphinx-mathjax-offline'
 ]
 
-# MathJax configuration
-mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js'
 
 # Optional: Customize MathJax options
-mathjax_config = {
-    'TeX': {'extensions': ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js']}
+# mathjax_config = {
+#     'TeX': {'extensions': ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js']}
+# }
+
+mathjax3_config = {
+  'tex2jax': {
+    'inlineMath': [['$','$'], ['\\(','\\)']],
+    'processEscapes': True
+  }
 }
+
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
-
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
