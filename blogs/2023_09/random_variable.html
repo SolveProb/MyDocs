@@ -16,13 +16,12 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=f6245a2f"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["\\[", "\\]"], ["$$", "$$"]]}})</script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["\\[", "\\]"], ["$$", "$$"]]}}</script>
-        <script defer="defer" src="../../_static/mathjax/tex-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="测试公式" href="mathjax.html" /> 
+    <link rel="prev" title="blogs" href="../blog_index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,7 +45,6 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../blog_index.html">blogs</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="mathjax.html">测试公式</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">概率论基本概念</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id2">随机事件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">随机变量</a><ul>
@@ -85,29 +83,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="id1">
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>概率论基本概念<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
 <section id="id2">
 <h2>随机事件<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <p><strong>定义</strong>  随机现象：在一定的条件下，并不总是出现相同结果的现象。</p>
 <p><strong>定义</strong> 随机试验: 对在相同条件下可以重复的 <strong>随机现象</strong> 的观察，记录，实验。</p>
-<p><strong>定义</strong> 样本空间: 随机现象的一切基本结果的 <strong>集合</strong>。用 $\Omega = { \omega }$ 表示, 其中 $\omega$ 表示基本结果，又称样本点。</p>
+<p><strong>定义</strong> 样本空间: 随机现象的一切基本结果的 <strong>集合</strong>。用 <span class="math notranslate nohighlight">\(\Omega = \{ \omega \}\)</span> 表示, 其中 <span class="math notranslate nohighlight">\(\omega\)</span> 表示基本结果，又称样本点。</p>
 <p><strong>定义</strong> 随机事件:	随机现象的某些样本点组成的 <strong>集合</strong>。</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>常用 A, B, C 表示，简称 事件。</p></li>
-<li><p>事件A 发生 $\Leftrightarrow$  A  中 某个样本点出现。</p></li>
+<li><p>事件A 发生 <span class="math notranslate nohighlight">\(\Leftrightarrow\)</span>  A  中 某个样本点出现。</p></li>
 </ol>
 </section>
 <section id="id3">
 <h2>随机变量<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
 <p><strong>定义</strong> 随机变量: 表示随机现象结果的变量。</p>
-<p><strong>定义</strong> 随机变量: 定义在样本空间 $\Omega$ 上的实值函数 X = X(w)</p>
-<ol class="simple">
+<p><strong>定义</strong> 随机变量: 定义在样本空间 <span class="math notranslate nohighlight">\(\Omega\)</span> 上的实值函数 X = X(w)</p>
+<ol class="arabic simple">
 <li><p>常用 X,Y,Z 表示，其取值用 x,y,z 表示。</p></li>
 <li><p>很多 <strong>事件</strong> 可以用随机变量表示，表示是应写明随机变量的含义。</p></li>
 <li><p>随机变量的含义是按需要设置的。</p></li>
 <li><p>与微积分中的变量不同，概率论中的随机变量 X 是一种随机取值的变量，且 便随一个 <strong>分布</strong>。以离散随机变量为例，我们不仅需要知道 X 可能取哪些值，还需要知道它取这些值的概率是多少，这就需要分布的概念。有没有分布是区分一般变量与随机变量的主要标志。</p></li>
-<li><p>X： $\Omega \rightarrow \mathbb{R}$</p></li>
+<li><p>X： <span class="math notranslate nohighlight">\(\Omega \rightarrow \mathbb{R}\)</span></p></li>
 </ol>
 <section id="id4">
 <h3>随机变量的理解<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
@@ -142,33 +140,37 @@
 <td>12</td>
 </tr>
 </tbody>
-</table><p><strong>事件</strong> A： 两次点数之和为 6 $\Leftrightarrow A = { \omega  | X(\omega) = 6}$</p>
+</table>
+<p><strong>事件</strong> A： 两次点数之和为 6  <span class="math notranslate nohighlight">\(\Leftrightarrow A = \{ \omega  | X(\omega) = 6 \}\)</span></p>
 <p>P(A) = 5/36</p>
 </section>
 <section id="id5">
 <h3>随机变量的分布<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
-<p><strong>定义</strong>：设 X 是一个随机变量，对 $\forall \ x \in \mathbb{R} $ ， 称
-$$
+<p><strong>定义</strong>：设 X 是一个随机变量，对 <span class="math notranslate nohighlight">\(\forall \ x \in \mathbb{R} \)</span> ， 称</p>
+<div class="math notranslate nohighlight">
+\[
 F(x)=P(X \le x)
-$$
-为 X 的 <strong>分布函数</strong>（CDF，Cumulative Distribution Function）</p>
-<ol class="simple">
-<li><p>称 X 服从 F(x), 记 $X \sim F(x)$</p></li>
-<li><p>用 $F_X(x)$ 表明是X的分布函数</p></li>
-<li><p>$F(x) : \mathbb{R} \rightarrow [0,1]$</p></li>
-<li><p>若 X=X(w)，$ B \subset \mathbb{R} <span class="math notranslate nohighlight">\(, 则 \)</span>{ X \in B }$  表示如下随机事件：${ \omega | X(\omega) \in B } \subset \Omega$</p></li>
-<li><p>通常使用 $\le,=,&lt;,&gt;$ 把 X 与某些实数连接，以表示事件。例如: ${ X \le a}$</p></li>
+\]</div>
+<p>为 X 的 <strong>分布函数</strong>（CDF，Cumulative Distribution Function）</p>
+<ol class="arabic simple">
+<li><p>称 X 服从 F(x), 记 <span class="math notranslate nohighlight">\(X \sim F(x)\)</span></p></li>
+<li><p>用 <span class="math notranslate nohighlight">\(F_X(x)\)</span> 表明是X的分布函数</p></li>
+<li><p><span class="math notranslate nohighlight">\(F(x) : \mathbb{R} \rightarrow [0,1]\)</span></p></li>
+<li><p>若 X=X(w), <span class="math notranslate nohighlight">\(B \subset \mathbb{R}\)</span>, 则 <span class="math notranslate nohighlight">\(\{ X \in B \}\)</span>  表示如下随机事件：<span class="math notranslate nohighlight">\(\{ \omega | X(\omega) \in B \} \subset \Omega\)</span></p></li>
+<li><p>通常使用 <span class="math notranslate nohighlight">\(\le,=,&lt;,&gt;\)</span> 把 X 与某些实数连接，以表示事件。例如: <span class="math notranslate nohighlight">\(\{ X \le a\}\)</span></p></li>
 </ol>
-<p><strong>定义</strong>：设 X 为 离散随机变量，若 X 的所有可能取值为 $x_1, x_2,\dots x_n …,$ 则称 X 取 $x_i$ 的  概率
-$$
+<p><strong>定义</strong>：设 X 为 离散随机变量，若 X 的所有可能取值为 <span class="math notranslate nohighlight">\(x_1, x_2,\dots x_n ...,\)</span> 则称 X 取 <span class="math notranslate nohighlight">\(x_i\)</span> 的  概率</p>
+<div class="math notranslate nohighlight">
+\[
 p_i = p(x_i) = P(X=x_i), i=1,2,\dots,n,\dots
-$$
-为 X 的 <strong>概率分布列</strong>，记 $ X \sim {  p_i } $</p>
-<p><strong>定义</strong>： 设 随机变量X 的分布函数 为 F(x)， 若存在实轴上的一个非负可积函数 p(x), 使得对任意 x：
-$$
+\]</div>
+<p>为 X 的 <strong>概率分布列</strong>   记  <span class="math notranslate nohighlight">\( X \sim \{  p_i \} \)</span></p>
+<p><strong>定义</strong>： 设 随机变量X 的分布函数 为 F(x)， 若存在实轴上的一个非负可积函数 p(x), 使得对任意 x：</p>
+<div class="math notranslate nohighlight">
+\[
 F(x)= \int_{-\infty}^{x} p(t) dt
-$$
-则 称 p(x) 为 X 的 概率密度函数（PDF, Probability Density Function）</p>
+\]</div>
+<p>则 称 p(x) 为 X 的 概率密度函数（PDF, Probability Density Function）</p>
 </section>
 </section>
 </section>
@@ -177,7 +179,7 @@ $$
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="mathjax.html" class="btn btn-neutral float-left" title="测试公式" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../blog_index.html" class="btn btn-neutral float-left" title="blogs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
