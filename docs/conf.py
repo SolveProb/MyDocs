@@ -14,33 +14,20 @@ release = '0.0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['recommonmark',
+extensions = [
 'sphinx_markdown_tables',
 'sphinx.ext.mathjax',
-'sphinx_math_dollar',
-'sphinx-mathjax-offline'
+'myst_parser',
 ]
 
-
-# mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js'
-# mathjax_path = 'https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
-
-
-# Optional: Customize MathJax options
-
-mathjax_config = {
-    'tex2jax': {
-        'inlineMath': [['$','$'],  ["\\(","\\)"] ],
-        'displayMath': [["\\[","\\]"] , ['$$','$$']],
-    },
-}
-
-mathjax3_config = {
-  "tex": {
-    "inlineMath": [['$','$'], ['\\(', '\\)']],
-    "displayMath": [["\\[", "\\]"], ['$$','$$']],
-  }
-}
+myst_enable_extensions = [
+    "amsmath",
+    "attrs_inline",
+    "colon_fence",
+    "deflist",
+    "dollarmath",
+    "tasklist",
+]
 
 
 templates_path = ['_templates']

@@ -39,32 +39,40 @@
 | ...        | ...      |
 | w(6,6)     | 12       |
 
-**事件** A： 两次点数之和为 6 $\Leftrightarrow A = \{ \omega  | X(\omega) = 6\}$ 
+**事件** A： 两次点数之和为 6  $\Leftrightarrow A = \{ \omega  | X(\omega) = 6 \}$ 
 
 P(A) = 5/36
+
+
 
 ### 随机变量的分布
 
 **定义**：设 X 是一个随机变量，对 $\forall \ x \in \mathbb{R} $ ， 称
+
 $$
 F(x)=P(X \le x)
 $$
+
  为 X 的 **分布函数**（CDF，Cumulative Distribution Function）
 
 1.  称 X 服从 F(x), 记 $X \sim F(x)$
 2. 用 $F_X(x)$ 表明是X的分布函数
 3. $F(x) : \mathbb{R} \rightarrow [0,1]$ 
-4. 若 X=X(w)，$ B \subset \mathbb{R} $, 则 $\{ X \in B \}$  表示如下随机事件：$\{ \omega | X(\omega) \in B \} \subset \Omega$
+4. 若 X=X(w), $B \subset \mathbb{R}$, 则 $\{ X \in B \}$  表示如下随机事件：$\{ \omega | X(\omega) \in B \} \subset \Omega$
 5. 通常使用 $\le,=,<,>$ 把 X 与某些实数连接，以表示事件。例如: $\{ X \le a\}$
 
 **定义**：设 X 为 离散随机变量，若 X 的所有可能取值为 $x_1, x_2,\dots x_n ...,$ 则称 X 取 $x_i$ 的  概率
+
 $$
 p_i = p(x_i) = P(X=x_i), i=1,2,\dots,n,\dots
 $$
-为 X 的 **概率分布列**，记 $ X \sim \{  p_i \} $
+
+为 X 的 **概率分布列**   记  $ X \sim \{  p_i \} $
 
 **定义**： 设 随机变量X 的分布函数 为 F(x)， 若存在实轴上的一个非负可积函数 p(x), 使得对任意 x：
+
 $$
 F(x)= \int_{-\infty}^{x} p(t) dt
 $$
+
 则 称 p(x) 为 X 的 概率密度函数（PDF, Probability Density Function）
